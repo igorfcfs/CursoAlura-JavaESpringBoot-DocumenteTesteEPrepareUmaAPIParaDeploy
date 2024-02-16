@@ -1,12 +1,13 @@
 package med.voll.api.domain.consulta;
 
-import java.time.LocalDateTime;
-
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotNull;
 import med.voll.api.domain.medico.Especialidade;
 
-public record DadosAgendamentoConsulta(Long idMedico,
+import java.time.LocalDateTime;
+
+public record DadosAgendamentoConsulta(
+        Long idMedico,
 
         @NotNull
         Long idPaciente,
@@ -16,5 +17,4 @@ public record DadosAgendamentoConsulta(Long idMedico,
         LocalDateTime data,
 
         Especialidade especialidade) {
-
 }

@@ -27,7 +27,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
             )
             order by rand()
             limit 1
-        """) //JPQL - Java Persistence Query Language
+        """)
     Medico escolherMedicoAleatorioLivreNaData(Especialidade especialidade, LocalDateTime data);
 
     @Query("""
